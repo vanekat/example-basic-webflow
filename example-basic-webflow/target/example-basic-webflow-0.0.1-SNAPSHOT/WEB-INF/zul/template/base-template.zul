@@ -1,0 +1,17 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<borderlayout width="100%" height="100%">
+		<north border="none" size="10%" class="header">
+			<include src="/WEB-INF/zul/template/structure/header.zul" />
+		</north>
+		<center border="none" flex="true" class="center">
+			<hlayout>				
+				<div class="center-right" self="@{insert(content)}">					
+				</div>
+			</hlayout>
+		</center>
+		<south border="none" class="footer" size="10%">
+			<include src="/WEB-INF/zul/template/structure/footer.zul" />
+		</south>
+	</borderlayout>
+</zk>

@@ -1,0 +1,9 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/WEB-INF/zul/template/base-template.zul"?>
+<zk>
+	<div self="@{define(content)}">
+	
+		<a href="/flows/customer-application">Welcome to Customer Application WebFlow</a>
+	
+	</div>
+</zk>

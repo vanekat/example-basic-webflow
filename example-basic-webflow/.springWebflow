@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.1.0.201210040510-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/webapp/WEB-INF/flows/customer-application.xml</file>
+			<name><![CDATA[customer-application]]></name>
+			<beans-config><![CDATA[1:BeansModel|2:example-basic-webflow|3:src/main/resources/com/axfin/spring/application-context.xml]]></beans-config>
+		</config>
+	</configs>
+</webflow-project-description>

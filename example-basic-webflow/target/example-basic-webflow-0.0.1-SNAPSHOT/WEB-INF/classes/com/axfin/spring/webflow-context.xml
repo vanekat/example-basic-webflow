@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:webflow="http://www.springframework.org/schema/webflow-config"
+	xmlns:zksp="http://www.zkoss.org/2008/zkspring/webflow"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/webflow-config
+    	http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd
+    	http://www.zkoss.org/2008/zkspring/webflow
+    	http://www.zkoss.org/2008/zkspring/webflow/zkspring-webflow.xsd
+    	">
+	<!-- Enables FlowHandlers -->
+	<zksp:flow-controller id="flowController" flow-executor="flowExecutor"/>
+ 	
+ 	<!-- Executes flows: the entry point into the Spring Web Flow system --> 	
+	<webflow:flow-executor id="flowExecutor"/> 
+	
+	<!-- The registry of executable flow definitions -->	
+	<webflow:flow-registry id="flowRegistry"  flow-builder-services="zkFlowBuilderServices">
+        <webflow:flow-location id="customer-application" path="/WEB-INF/zul/flows/customer-application/customer-application.xml"/>
+    </webflow:flow-registry>
+    
+	 <zksp:flow-builder-services id="zkFlowBuilderServices"/>
+</beans>

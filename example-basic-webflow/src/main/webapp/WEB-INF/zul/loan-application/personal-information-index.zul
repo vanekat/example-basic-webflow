@@ -1,0 +1,32 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/zul/template/base-template.zul"?>
+<zk self="@{define(content)}">
+
+	<grid hflex="1">
+
+
+		<rows>
+			<row>
+				First Name:
+				<textbox id="firstName" hflex="1" constraint="no empty" />
+			</row>
+
+			<row>
+				Last Name:
+				<textbox id="lastName" hflex="1" constraint="no empty" />
+			</row>
+
+			<row>
+				Date of Birth:
+				<datebox id="birthdayBox" hflex="1"
+					constraint="no empty, no today, no future" />
+			</row>
+			<row spans="2" align="right">
+				<hlayout>
+					<button id="resetButton" label="Next" />
+				</hlayout>
+			</row>
+		</rows>
+	</grid>
+
+</zk>

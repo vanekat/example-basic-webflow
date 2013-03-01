@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<view-state id="personal-information-index" >
+		<transition on="next" to="personal-information-assets"/>
+	</view-state>
+	
+	<view-state id="personal-information-assets" >
+		<transition on="next" to="personal-information-income"/>
+	</view-state>
+	
+	<view-state id="personal-information-income" >
+		<transition on="next" to="personal-information-references"/>
+	</view-state>
+	
+	<view-state id="personal-information-references" >
+		<transition on="next" to="personal-information-finish"/>
+	</view-state>
+	
+	<end-state id="personal-information-finish" />
+</flow>
